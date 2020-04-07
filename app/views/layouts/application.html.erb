@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render 'shared/navbar' %>
     <title>RentAPet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,8 +15,7 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
     <!-- integration flash lerts devise -->
     <%= render 'shared/flashes' %>
     <%= yield %>
