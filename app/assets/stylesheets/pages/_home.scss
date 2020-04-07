@@ -1,1 +1,41 @@
-// Specific CSS for your home-page
+.background {
+  background-image: url("Fond ecran.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 20%;
+  height: 99vh;
+}
+.title {
+  padding-top:200px;
+  color: #a46150;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90px;
+  text-shadow: 2px 0 0 white, 2px 2px 0 white, 0 2px 0 white, -2px 2px 0 white, -2px 0 0 white, -2px -2px 0 white, 0 -2px 0 white, 2px -2px 0 white;
+}
+.content {
+  margin: 100px 150px;
+  text-align: center;
+  font-weight:bold;
+}
+.button-home {
+  margin:0 500px;
+  cursor: pointer;
+  background-color: #a46150;
+  border-radius:10px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  border:none;
+
+  &:hover {
+  color:#a46150;
+  background-color: white;
+  border: 1px solid #a46150;
+  }
+}
+
+
