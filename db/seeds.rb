@@ -15,6 +15,9 @@ pet = Pet.new( user: User.first,
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
                price_per_day: 47)
 
+
+
+
 # pet_photo = "https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg"
 
 # File.open(Rails.root.join('db/fixtures/pets/pet_1.jpg'))
