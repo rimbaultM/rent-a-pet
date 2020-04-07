@@ -1,1 +1,13 @@
-<h1>test index pets</h1>
+<div class="container">
+
+  <h1>Voici la liste de tous les acteurs disponibles</h1>
+
+  <div class="cards">
+    <% @pets.each do |pet| %>
+      <div class="card-category">
+        <%= link_to pet.name, pet_path(pet) %>
+        <%= pet.price_per_day " € / jour" %>
+      </div>
+    <% end %>
+  </div>
+</div>

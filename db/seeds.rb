@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Pet.new(name: 'Igor', species: 'Crabe', description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch", price_per_day: 47)
+
+Pet.new(name: 'Mafalda', species: 'Loutre', description: "Marshall sait compter deux par deux et lacer ses chaussures", price_per_day: 77)
