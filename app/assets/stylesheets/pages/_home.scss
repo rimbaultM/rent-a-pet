@@ -1,1 +1,51 @@
-// Specific CSS for your home-page
+.background {
+  background-image: url("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1586251578/Fond_ecran_dhh6p0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 20%;
+  height: 99vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+.center{
+  text-align:center;
+}
+.title {
+  padding-top:200px;
+  color: #a46150;
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+  font-size: 90px;
+  text-shadow: 2px 0 0 white, 2px 2px 0 white, 0 2px 0 white, -2px 2px 0 white, -2px 0 0 white, -2px -2px 0 white, 0 -2px 0 white, 2px -2px 0 white;
+}
+.content {
+  margin: 100px 150px;
+  font-weight:bold;
+}
+.button-home {
+  background-color: #a46150;
+  border-radius:10px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  border:none;
+
+  &:hover {
+  color:#a46150;
+  background-color: white;
+  border: 1px solid #a46150;
+  }
+}
+.beware{
+
+  color:white;
+  margin-top: 200px;
+
+}
+body {
+  margin: -20px;
+}
+
+
