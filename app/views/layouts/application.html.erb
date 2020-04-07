@@ -15,8 +15,10 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
+    <!-- integration flash lerts devise -->
+    <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
 </html>
+
