@@ -1,14 +1,21 @@
-
-
-
-
 <div class="container">
-  <h1> <%= @pet.name %> </h1>
-  <h1> <%= @pet.descripton %> </h1>
-  <h1> <%= @pet.species %> </h1>
-  <h1> <%= @pet.price_per_day %> </h1>
-</div>
+  <div class="card mb-3 card_show" style="max-width: 1200px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= @pet.name %></h5>
+          <p class="card-text"><%= @pet.description %></p>
+          <p class="card-text"><%= @pet.species %></p>
+          <p class="card-text"><%= @pet.price_per_day %> € / jour</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div><%= link_to "Add a new do dose", new_cocktail_dose_path(@cocktail) %></div>
-<%= link_to "Return to Cocktail list", cocktails_path %>
+
+
+</div>
 
