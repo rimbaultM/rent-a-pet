@@ -2,11 +2,16 @@
 
   <h1>Voici la liste de tous les acteurs disponibles</h1>
 
-  <div class="cards">
+  <div class="card-trip">
     <% @pets.each do |pet| %>
-      <div class="card-category">
-        <%= link_to pet.name, pet_path(pet) %>
-        <%= pet.price_per_day %> <p>" € / jour" </p>
+      <img src="" alt="Pet Image" />
+
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to pet.name, pet_path(pet) %></h2>
+        </div>
+        <h2 class="card-trip-pricing"><%= pet.price_per_day %> € / jour</h2>
+        <img src="" alt="Avatar image" class="card-trip-user avatar-bordered" />
       </div>
     <% end %>
   </div>
