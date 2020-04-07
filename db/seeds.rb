@@ -6,11 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-Pet.create( user: User.first,
-            name: 'Igor',
-             species: 'Crabe',
-             description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
-             price_per_day: 47)
+require "open-uri"
 
 
+pet = Pet.new( user: User.first,
+               name: 'Igor',
+               species: 'Crabe',
+               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               price_per_day: 47)
+
+# pet_photo = "https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg"
+
+# File.open(Rails.root.join('db/fixtures/pets/pet_1.jpg'))
+
+pet.photo.attach(io:File.open('db/fixtures/pets/pet_1.jpg'), filename: 'pet_1.jpg', content_type: 'image/jpg')
+
+pet.save!
