@@ -1,0 +1,14 @@
+
+
+
+
+<div class="container">
+  <h1> <%= @pet.name %> </h1>
+  <h1> <%= @pet.descripton %> </h1>
+  <h1> <%= @pet.species %> </h1>
+  <h1> <%= @pet.price_per_day %> </h1>
+</div>
+
+<div><%= link_to "Add a new do dose", new_cocktail_dose_path(@cocktail) %></div>
+<%= link_to "Return to Cocktail list", cocktails_path %>
+
