@@ -15,11 +15,13 @@ pet = Pet.new( user: User.first,
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
                price_per_day: 47)
 
-pet.photo = "https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg"
+
+
+
+# pet_photo = "https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg"
 
 # File.open(Rails.root.join('db/fixtures/pets/pet_1.jpg'))
 
-# pet.photo.attach(io: pet_photo, filename: 'pet_1.jpg', content_type: 'image/jpg')
+pet.photo.attach(io:File.open('db/fixtures/pets/pet_1.jpg'), filename: 'pet_1.jpg', content_type: 'image/jpg')
 
 pet.save!
-

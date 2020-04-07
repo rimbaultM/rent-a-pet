@@ -4,7 +4,9 @@
 
   <div class="card-trip">
     <% @pets.each do |pet| %>
-       <img src="https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg" alt="Pet Image" />
+
+
+       <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
 
 
       <div class="card-trip-infos">
