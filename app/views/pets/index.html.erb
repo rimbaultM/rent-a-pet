@@ -6,7 +6,7 @@
     <% @pets.each do |pet| %>
       <div class="card-category">
         <%= link_to pet.name, pet_path(pet) %>
-        <%= pet.price_per_day " € / jour" %>
+        <%= pet.price_per_day %> <p>" € / jour" </p>
       </div>
     <% end %>
   </div>
