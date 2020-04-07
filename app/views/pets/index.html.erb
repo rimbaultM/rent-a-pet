@@ -1,1 +1,19 @@
-<h1>test index pets</h1>
+<div class="container">
+
+  <h1>Voici la liste de tous les acteurs disponibles</h1>
+
+  <div class="card-trip">
+    <% @pets.each do |pet| %>
+       <img src="https://images-na.ssl-images-amazon.com/images/I/71E5Aqst8fL._AC_SY679_.jpg" alt="Pet Image" />
+
+
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to pet.name, pet_path(pet) %></h2>
+        </div>
+        <h2 class="card-trip-pricing"><%= pet.price_per_day %> € / jour</h2>
+        <img src="" alt="Avatar image" class="card-trip-user avatar-bordered" />
+      </div>
+    <% end %>
+  </div>
+</div>
