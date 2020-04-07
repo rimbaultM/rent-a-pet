@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Pet.create(name: 'Igor',
-           species: 'Crabe',
-           description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
-           price_per_day: 47)
+
+
+Pet.create( user: User.first,
+            name: 'Igor',
+             species: 'Crabe',
+             description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+             price_per_day: 47)
 
 
