@@ -19,7 +19,7 @@ bernard = User.new( email: "bibi@mail.com", username: "Bibi", phone_number: "065
 bernard.save!
 
 
-crabe = Pet.new( user: User.first,
+crabe = Pet.new( user: bernard,
                name: 'Igor',
                species: 'Crabe',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -28,7 +28,7 @@ crabe = Pet.new( user: User.first,
 crabe.photo.attach(io:File.open('db/fixtures/pets/crabe_1.jpg'), filename: 'crabe_1.jpg', content_type: 'image/jpg')
 crabe.save!
 
-chien = Pet.new( user: User.last,
+chien = Pet.new( user: bernard,
                name: 'Hector',
                species: 'chien',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -37,7 +37,7 @@ chien = Pet.new( user: User.last,
 chien.photo.attach(io:File.open('db/fixtures/pets/cat_1.jpg'), filename: 'cat_1.jpg', content_type: 'image/jpg')
 chien.save!
 
-cat = Pet.new( user: User.first,
+cat = Pet.new( user: bernard,
                name: 'Minou',
                species: 'chat',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
