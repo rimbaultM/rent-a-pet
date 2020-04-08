@@ -37,7 +37,7 @@ chien = Pet.new( user_id: 7,
 chien.photo.attach(io:File.open('db/fixtures/pets/dog_1.jpg'), filename: 'dog_1.jpg', content_type: 'image/jpg')
 chien.save!
 
-cat = Pet.new( user_id: 7,
+cat = Pet.new( user_id: 6,
                name: 'Minou',
                species: 'chat',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
