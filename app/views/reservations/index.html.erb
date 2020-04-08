@@ -4,17 +4,17 @@
 
 <div class="container">
   <div class="place">
-    <h1>voici toutes vos reservations </h1>
+    <h1>Voici toutes vos réservations </h1>
 
 
       <% @reservation.each do |reservation| %>
         <div class="reservation">
           <ul>
-            <li>Nom : Minou</li>
+            <li>Nom : <%= reservation.pet.name %> </li>
             <li>Debut de la reservation : <%= reservation.start_date %> </li>
             <li>Fin de la reservation :  <%= reservation.end_date %> </li>
-            <li>Prix Total <%= reservation.total_price %> </li>
-            <li>Statut <%= reservation.status %> </li>
+            <li>Prix Total <%= reservation.total_price %> €</li>
+            <li>Statut : <%= reservation.status %> </li>
           </ul>
         </div>
       <% end %>
