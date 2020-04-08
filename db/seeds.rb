@@ -33,7 +33,7 @@ jacob.save!
 cat = Pet.new( user: bernard,
                name: 'Minou',
                species: 'chat',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               description: "Minou est un chat au pelage soyeux, et tres calin. Il saura vous relaxer avec ses ronronnements. Tres obeissant, vous apprecierez vous baladez avec lui.",
                price_per_day: 32)
 cat_photo = File.open(Rails.root.join('db/fixtures/pets/cat_1.jpg'))
 cat.photo.attach(io:cat_photo, filename: 'cat_1.jpg', content_type: 'image/jpg')
@@ -51,7 +51,7 @@ crabe.save!
 chien = Pet.new( user: paul,
                name: 'Hector',
                species: 'chien',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               description: "Hector sera votre meilleur ami. Tres joueur, il appreciera sortir et courrir avec vous",
                price_per_day: 35)
 chien_photo = File.open(Rails.root.join('db/fixtures/pets/dog_1.jpg'))
 chien.photo.attach(io:chien_photo, filename: 'dog_1.jpg', content_type: 'image/jpg')
@@ -60,7 +60,7 @@ chien.save!
 elephant = Pet.new( user: paul,
                name: 'dumbo',
                species: 'elephant',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               description: "Ne vous fiez pas a sa taille, il sait se faire petit. Il adore se promener et s'amuser a l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
                price_per_day: 82)
 elephant_photo = File.open(Rails.root.join('db/fixtures/pets/elephant_1.jpg'))
 elephant.photo.attach(io:elephant_photo, filename: 'elephant_1.jpg', content_type: 'image/jpg')
@@ -84,6 +84,6 @@ panda_photo = File.open(Rails.root.join('db/fixtures/pets/panda_1.jpg'))
 panda.photo.attach(io:panda_photo, filename: 'panda_1.jpg', content_type: 'image/jpg')
 panda.save!
 
-reservation1 = Reservation.create(pet: cat, user: jacob, start_date: Date.new(2020,2,25), end_date: Date.new(2020,2,27), status: 'over', total_price: 64)
-reservation2 = Reservation.create(pet: elephant, user: jacob, start_date: Date.new(2020,4,12), end_date: Date.new(2020,4,14), status: 'pending', total_price: 164)
+reservation1 = Reservation.create(pet: cat, user: jacob, start_date: Date.new(2020,2,25), end_date: Date.new(2020,2,27), status: 'Terminée', total_price: 64)
+reservation2 = Reservation.create(pet: elephant, user: jacob, start_date: Date.new(2020,4,12), end_date: Date.new(2020,4,14), status: 'En attente de validation', total_price: 164)
 
