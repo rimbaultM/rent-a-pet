@@ -6,8 +6,9 @@
           <%= cl_image_tag(pet.photo.key) %>
 
           <div class="card-trip-infos">
-            <h2><%= pet.name %></h2>
+            <h2 class="pt-3"><%= pet.name %></h2>
             <h2 class="card-trip-pricing"><%= pet.price_per_day %> € / jour</h2>
+            <%= cl_image_tag pet.user.photo.key, class: 'card-trip-user avatar-bordered' %>
           </div>
         </div>
       <% end %>
