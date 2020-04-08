@@ -10,7 +10,6 @@ require "open-uri"
 
 Pet.destroy_all
 
-
 crabe = Pet.new( user: User.first,
                name: 'Igor',
                species: 'Crabe',
