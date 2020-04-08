@@ -6,4 +6,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :pets
   has_many :reservations
+  has_one_attached :photo
 end
