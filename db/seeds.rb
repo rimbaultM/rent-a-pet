@@ -15,6 +15,8 @@ User.destroy_all
 paul = User.new( email: "paul@mail.com", username: "Paulo", phone_number: "0659868756", address: "Brest", password: "azerty")
 paul.save!
 
+
+
 bernard = User.new( email: "bibi@mail.com", username: "Bibi", phone_number: "0659598756", address: "Rennes", password: "azerty")
 bernard.save!
 
@@ -22,6 +24,8 @@ lucas = User.new( email: "lucas@mail.com", username: "Luc", phone_number: "06595
 lucas.save!
 
 jacob = User.new( email: "jacob@mail.com", username: "cobjac", phone_number: "0659598756", address: "brest", password: "azerty")
+jacob.photo.attach(io:File.open(Rails.root.join('db/fixtures/users/jacob.jpg'), filename: 'jacob.jpg', content_type: 'image/jpg'))
+
 jacob.save!
 
 cat = Pet.new( user: bernard,
