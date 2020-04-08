@@ -11,7 +11,11 @@
   width: 40px;
 }
 
-.navbar-lewagon .navbar-brand .hover {
-  text-decoration: underline;
+.navbar-lewagon ul li a:hover {
+  // text-decoration: underline;
+  // background-color: grey;
+  background-color: white;
+  border: 1px solid #a46150;
+  opacity: 0.5;
+  border-radius:10px;
 }
-
