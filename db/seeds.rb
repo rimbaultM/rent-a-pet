@@ -28,7 +28,7 @@ cat.photo.attach(io:File.open('db/fixtures/pets/cat_1.jpg'), filename: 'cat_1.jp
 cat.save!
 
 
-crabe = Pet.new( user_id: 7,
+crabe = Pet.new( user: User.last,
                name: 'Igor',
                species: 'Crabe',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -37,7 +37,7 @@ crabe = Pet.new( user_id: 7,
 crabe.photo.attach(io:File.open('db/fixtures/pets/crabe_1.jpg'), filename: 'crabe_1.jpg', content_type: 'image/jpg')
 crabe.save!
 
-chien = Pet.new( user_id: 7,
+chien = Pet.new( user: User.first,
                name: 'Hector',
                species: 'chien',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
