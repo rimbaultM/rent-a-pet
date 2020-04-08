@@ -18,8 +18,17 @@ paul.save!
 bernard = User.new( email: "bibi@mail.com", username: "Bibi", phone_number: "0659598756", address: "Rennes", password: "azertyu")
 bernard.save!
 
+cat = Pet.new( user: User.last,
+               name: 'Minou',
+               species: 'chat',
+               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               price_per_day: 32)
 
-crabe = Pet.new( user_id: 7,
+cat.photo.attach(io:File.open('db/fixtures/pets/cat_1.jpg'), filename: 'cat_1.jpg', content_type: 'image/jpg')
+cat.save!
+
+
+crabe = Pet.new( user: User.last,
                name: 'Igor',
                species: 'Crabe',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -28,7 +37,7 @@ crabe = Pet.new( user_id: 7,
 crabe.photo.attach(io:File.open('db/fixtures/pets/crabe_1.jpg'), filename: 'crabe_1.jpg', content_type: 'image/jpg')
 crabe.save!
 
-chien = Pet.new( user_id: 7,
+chien = Pet.new( user: User.first,
                name: 'Hector',
                species: 'chien',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -37,14 +46,7 @@ chien = Pet.new( user_id: 7,
 chien.photo.attach(io:File.open('db/fixtures/pets/dog_1.jpg'), filename: 'dog_1.jpg', content_type: 'image/jpg')
 chien.save!
 
-cat = Pet.new( user_id: 6,
-               name: 'Minou',
-               species: 'chat',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
-               price_per_day: 32)
 
-cat.photo.attach(io:File.open('db/fixtures/pets/cat_1.jpg'), filename: 'cat_1.jpg', content_type: 'image/jpg')
-cat.save!
 
 
 
