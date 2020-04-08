@@ -1,16 +1,16 @@
 <div class="container">
-  <h1>Voici la liste de tous les acteurs disponibles</h1>
-
+  <div class="cards">
     <% @pets.each do |pet| %>
-    <div class="cards">
-      <div class="card-category">
-        <%= cl_image_tag pet.photo.key, height: 600, width: 400, crop: :fill %>
-        <h2> <%= pet.name %> <%= pet.price_per_day %> € / jour</h2>
-      </div>
+      <%= link_to pet_path(pet), class: 'no-deco' do %>
+        <div class="card-trip">
+          <%= cl_image_tag(pet.photo.key) %>
+
+          <div class="card-trip-infos">
+            <h2><%= pet.name %></h2>
+            <h2 class="card-trip-pricing"><%= pet.price_per_day %> € / jour</h2>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
-
 </div>
-
-
-
