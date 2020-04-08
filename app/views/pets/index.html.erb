@@ -1,4 +1,11 @@
+<%= render 'shared/navbar' %>
+    <!-- integration flash alerts devise -->
+<%= render 'shared/flashes' %>
+
 <div class="container">
+
+  <h1 class="index-title pt-5">Acteurs disponibles</h1>
+
   <div class="cards">
     <% @pets.each do |pet| %>
       <%= link_to pet_path(pet), class: 'no-deco' do %>
@@ -6,8 +13,9 @@
           <%= cl_image_tag(pet.photo.key) %>
 
           <div class="card-trip-infos">
-            <h2><%= pet.name %></h2>
+            <h2 class="pt-3"><%= pet.name %></h2>
             <h2 class="card-trip-pricing"><%= pet.price_per_day %> € / jour</h2>
+            <%= cl_image_tag pet.user.photo.key, class: 'card-trip-user avatar-bordered' %>
           </div>
         </div>
       <% end %>

@@ -1,0 +1,25 @@
+<%= render 'shared/navbar' %>
+    <!-- integration flash alerts devise -->
+<%= render 'shared/flashes' %>
+
+<div class="container">
+  <div class="place">
+    <h1>voici toutes vos reservations </h1>
+
+
+      <% @reservation.each do |reservation| %>
+        <div class="reservation">
+          <ul>
+            <li>Nom : Minou</li>
+            <li>Debut de la reservation : <%= reservation.start_date %> </li>
+            <li>Fin de la reservation :  <%= reservation.end_date %> </li>
+            <li>Prix Total <%= reservation.total_price %> </li>
+            <li>Statut <%= reservation.status %> </li>
+          </ul>
+        </div>
+      <% end %>
+
+
+
+  </div>
+</div>

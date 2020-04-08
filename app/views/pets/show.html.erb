@@ -1,22 +1,44 @@
-<div class="container">
-  <div class="card mb-3 card_show" style="max-width: 1200px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
+<%= render 'shared/navbar' %>
+    <!-- integration flash alerts devise -->
+<%= render 'shared/flashes' %>
 
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title"><%= @pet.name %></h5>
-          <p class="card-text"><%= @pet.description %></p>
-          <p class="card-text"><%= @pet.species %></p>
-          <p class="card-text"><%= @pet.photo %></p>
-          <p class="card-text"><%= @pet.price_per_day %> € / jour</p>
+<div class="container">
+  <div class="place">
+    <div class="card-product">
+      <%= cl_image_tag(@pet.photo.key) %>
+      <div class="card-product-infos">
+        <h1><%= @pet.name %></h1>
+        <p><%= @pet.description %></p>
+
+        <p>Espèce : <%= @pet.species %></p>
+        <p><%= @pet.price_per_day %> € / jour</p>
+        <br>
+        <div class= "form-reservation">
+          <form action=""></form>
+          <label for="">Debut de la reservation*</label>
+          <br>
+          <input type="date" name="start-date">
+          <br>
+          <label for="">Fin de la reservation</label>
+          <br>
+          <input type="date" name="end-date">
+          <br>
+          <br>
+
+          <%= link_to "Reservez", reservations_path, class:"btn btn-primary" %>
+          <br>
+          <br>
+          <br><br>
+           <p>* L'acteur ne peut être loué moins d'une journée.<br>Il sera à votre disposition pour faire le ménage, la cuisine ou garder les enfants.</p>
+
+
+
         </div>
       </div>
     </div>
+
+
   </div>
-
-
 
 </div>
 
