@@ -13,13 +13,13 @@ User.destroy_all
 
 
 paul = User.new( email: "paul@mail.com", username: "Paulo", phone_number: "0659868756", address: "Brest", password: "azerty")
-paul.photo.attach(io:File.open('db/fixtures/users/paul.jpg'), filename: 'paul.jpg', content_type: 'image/jpg')
+paul.photo.attach(io:File.open('db/fixtures/users/holiwood.jpg'), filename: 'holiwood.jpg', content_type: 'image/jpg')
 paul.save!
 
 
 
 bernard = User.new( email: "bibi@mail.com", username: "Bibi", phone_number: "0659598756", address: "Rennes", password: "azerty")
-bernard.photo.attach(io:File.open('db/fixtures/users/bernard.jpg'), filename: 'bernard.jpg', content_type: 'image/jpg')
+bernard.photo.attach(io:File.open('db/fixtures/users/comediefr.jpg'), filename: 'comediefr.jpg', content_type: 'image/jpg')
 bernard.save!
 
 lucas = User.new( email: "lucas@mail.com", username: "Luc", phone_number: "0659598756", address: "brest", password: "azerty")
@@ -66,7 +66,7 @@ elephant_photo = File.open(Rails.root.join('db/fixtures/pets/elephant_1.jpg'))
 elephant.photo.attach(io:elephant_photo, filename: 'elephant_1.jpg', content_type: 'image/jpg')
 elephant.save!
 
-poulet = Pet.new( user: lucas,
+poulet = Pet.new( user: bernard,
                name: 'chuck',
                species: 'poulet',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
@@ -75,7 +75,7 @@ poulet_photo = File.open(Rails.root.join('db/fixtures/pets/poulet_1.jpg'))
 poulet.photo.attach(io:poulet_photo, filename: 'poulet_1.jpg', content_type: 'image/jpg')
 poulet.save!
 
-panda = Pet.new( user: lucas,
+panda = Pet.new( user: bernard,
                name: 'chuck',
                species: 'poulet',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
