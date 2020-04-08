@@ -46,3 +46,4 @@ chien = Pet.new( user: User.first,
 chien.photo.attach(io:File.open('db/fixtures/pets/dog_1.jpg'), filename: 'dog_1.jpg', content_type: 'image/jpg')
 chien.save!
 
+
