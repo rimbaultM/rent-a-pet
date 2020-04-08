@@ -32,9 +32,9 @@ jacob.save!
 
 cat = Pet.new( user: bernard,
                name: 'Minou',
-               species: 'chat',
-               description: "Minou est un chat au pelage soyeux, et tres calin. Il saura vous relaxer avec ses ronronnements. Tres obeissant, vous apprecierez vous baladez avec lui.",
-               price_per_day: 32)
+               species: 'Chat',
+               description: "Minou est un chat au pelage soyeux, et très câlin. Il saura vous relaxer avec ses ronronnements. Très obéissant, vous apprecierez vous balader avec lui.",
+               price_per_day: 82)
 cat_photo = File.open(Rails.root.join('db/fixtures/pets/cat_1.jpg'))
 cat.photo.attach(io:cat_photo, filename: 'cat_1.jpg', content_type: 'image/jpg')
 cat.save!
@@ -42,7 +42,7 @@ cat.save!
 crabe = Pet.new( user: bernard,
                name: 'Igor',
                species: 'Crabe',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son brunch",
                price_per_day: 47)
 crabe_photo = File.open(Rails.root.join('db/fixtures/pets/crabe_1.jpg'))
 crabe.photo.attach(io:crabe_photo, filename: 'crabe_1.jpg', content_type: 'image/jpg')
@@ -50,35 +50,35 @@ crabe.save!
 
 chien = Pet.new( user: paul,
                name: 'Hector',
-               species: 'chien',
-               description: "Hector sera votre meilleur ami. Tres joueur, il appreciera sortir et courrir avec vous",
+               species: 'Chien',
+               description: "Hector sera votre meilleur ami. Très joueur, il appreciera sortir et courrir avec vous",
                price_per_day: 35)
 chien_photo = File.open(Rails.root.join('db/fixtures/pets/dog_1.jpg'))
 chien.photo.attach(io:chien_photo, filename: 'dog_1.jpg', content_type: 'image/jpg')
 chien.save!
 
 elephant = Pet.new( user: paul,
-               name: 'dumbo',
-               species: 'elephant',
-               description: "Ne vous fiez pas a sa taille, il sait se faire petit. Il adore se promener et s'amuser a l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
+               name: 'Dumbo',
+               species: 'Elephant',
+               description: "Ne vous fiez pas à sa taille, il sait se faire petit. Il adore se promener et s'amuser à l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
                price_per_day: 82)
 elephant_photo = File.open(Rails.root.join('db/fixtures/pets/elephant_1.jpg'))
 elephant.photo.attach(io:elephant_photo, filename: 'elephant_1.jpg', content_type: 'image/jpg')
 elephant.save!
 
 poulet = Pet.new( user: bernard,
-               name: 'chuck',
-               species: 'poulet',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               name: 'Chuck',
+               species: 'Poulet',
+               description: "Chuck est un poulet intelligent et sage, il adore qu'on lui nettoie les pattes après son lunch",
                price_per_day: 16)
 poulet_photo = File.open(Rails.root.join('db/fixtures/pets/poulet_1.jpg'))
 poulet.photo.attach(io:poulet_photo, filename: 'poulet_1.jpg', content_type: 'image/jpg')
 poulet.save!
 
 panda = Pet.new( user: bernard,
-               name: 'chuck',
-               species: 'poulet',
-               description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son lunch",
+               name: 'Pandee',
+               species: 'Panda',
+               description: "Pandee est un petit panda de chine, il n'est pas très rapide et adore dormir. Il vous donnera du réconfort dans votre journée ",
                price_per_day: 48)
 panda_photo = File.open(Rails.root.join('db/fixtures/pets/panda_1.jpg'))
 panda.photo.attach(io:panda_photo, filename: 'panda_1.jpg', content_type: 'image/jpg')
