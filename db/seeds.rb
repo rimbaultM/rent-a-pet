@@ -24,8 +24,7 @@ lucas = User.new( email: "lucas@mail.com", username: "Luc", phone_number: "06595
 lucas.save!
 
 jacob = User.new( email: "jacob@mail.com", username: "cobjac", phone_number: "0659598756", address: "brest", password: "azerty")
-jacob.photo.attach(io:File.open(Rails.root.join('db/fixtures/users/jacob.jpg'), filename: 'jacob.jpg', content_type: 'image/jpg'))
-
+#jacob.photo.attach(io:File.open(Rails.root.join('db/fixtures/users/jacob.jpg'), filename: 'jacob.jpg', content_type: 'image/jpg'))
 jacob.save!
 
 cat = Pet.new( user: bernard,
