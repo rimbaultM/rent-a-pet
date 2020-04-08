@@ -1,0 +1,11 @@
+<h1>voici toutes vos reservations </h1>
+
+<ul>
+<% @reservation.each do |reservation| %>
+  <li> <%= reservation.total_price %> </li>
+  <li> <%= reservation.start_date %> </li>
+  <li> <%= reservation.end_date %> </li>
+  <li> <%= reservation.status %> </li>
+  <% end %>
+
+  </ul>
