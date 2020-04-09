@@ -17,17 +17,13 @@
   object-fit: contain;
   border-bottom: 1px solid black;
 }
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-.card-trip .card-trip-infos {
+.card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -35,17 +31,28 @@
   position: relative;
   color: black;
 }
-.card-trip-infos .card-trip-user {
+.card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 40px;
-  height: 40px;
+  top: -30px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
+}
+.pet_name{
+  font-size:26px;
+  font-weight: bold;
+}
+.pet_owner{
+  font-size:25px;
+}
+.pet_price{
+  font-size:16px;
+  font-weight: bold;
 }
 
 .cards {
-  margin-top: 100px;
+  margin-top: 50px;
   height: 400px; // Taille card
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

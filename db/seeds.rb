@@ -12,21 +12,21 @@ Pet.destroy_all
 User.destroy_all
 
 
-paul = User.new( email: "paul@mail.com", username: "Paulo", phone_number: "0659868756", address: "Brest", password: "azerty")
-paul.photo.attach(io:File.open('db/fixtures/users/holiwood.jpg'), filename: 'holiwood.jpg', content_type: 'image/jpg')
+paul = User.new( email: "paul@mail.com", username: "Paul", phone_number: "0659868756", address: "Brest", password: "azerty")
+paul.photo.attach(io:File.open('db/fixtures/users/paul.jpg'), filename: 'paul.jpg', content_type: 'image/jpg')
 paul.save!
 
 
 
-bernard = User.new( email: "bibi@mail.com", username: "Bibi", phone_number: "0659598756", address: "Rennes", password: "azerty")
-bernard.photo.attach(io:File.open('db/fixtures/users/comediefr.jpg'), filename: 'comediefr.jpg', content_type: 'image/jpg')
+bernard = User.new( email: "bibi@mail.com", username: "Bernard", phone_number: "0659598756", address: "Rennes", password: "azerty")
+bernard.photo.attach(io:File.open('db/fixtures/users/bernard.jpg'), filename: 'bernard.jpg', content_type: 'image/jpg')
 bernard.save!
 
-lucas = User.new( email: "lucas@mail.com", username: "Luc", phone_number: "0659598756", address: "brest", password: "azerty")
+lucas = User.new( email: "lucas@mail.com", username: "Lucas", phone_number: "0659598756", address: "brest", password: "azerty")
 lucas.photo.attach(io:File.open('db/fixtures/users/lucas.jpg'), filename: 'lucas.jpg', content_type: 'image/jpg')
 lucas.save!
 
-jacob = User.new( email: "jacob@mail.com", username: "cobjac", phone_number: "0659598756", address: "brest", password: "azerty")
+jacob = User.new( email: "jacob@mail.com", username: "jacob", phone_number: "0659598756", address: "brest", password: "azerty")
 jacob.photo.attach(io:File.open('db/fixtures/users/jacob.jpg'), filename: 'jacob.jpg', content_type: 'image/jpg')
 jacob.save!
 

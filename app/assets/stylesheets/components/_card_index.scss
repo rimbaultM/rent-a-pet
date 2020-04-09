@@ -12,7 +12,12 @@
     color: white;
     text-align: center;
   }
+  .name{
+  font-size: 25px;
+  font-weight: bold;
 }
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
