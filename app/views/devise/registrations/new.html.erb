@@ -5,6 +5,7 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
+      <%= f.input :photo, as: :file %>
       <%= f.input :username, label: "Nom d'utilisateur" %>
       <%= f.input :address, label: "Adresse" %>
             <%= f.input :phone_number, label: "Numéro de téléphone" %>
@@ -12,7 +13,6 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%#= f.input :photo, as: :file, input_html: { accept: User::AVATAR } %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
