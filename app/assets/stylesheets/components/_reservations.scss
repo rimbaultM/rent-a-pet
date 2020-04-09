@@ -3,10 +3,13 @@
   overflow: hidden;
   height: 200px;
   background: white;
+  width: 1000px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 8px;
+  margin-top: 100px;
 }
 
 .card-reservation img {
@@ -25,4 +28,12 @@
 
 .price {
   align-items: top;
+}
+.btn-primary{
+  margin-top: 8px;
+  align-items: flex-end;
+}
+
+.reservation container {
+  align-items: center;
 }
