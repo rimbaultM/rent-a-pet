@@ -2,14 +2,12 @@
     <!-- integration flash alerts devise -->
 <%= render 'shared/flashes' %>
 
-<%= render 'shared/footer' %>
-
 <div class="container">
 
-  <h1 class="index-title pt-5">Choisissez votre partenaire de sortie</h1>
+  <h1 class="index-title pt-5">Voici la liste vos mascotte</h1>
 
   <div class="cards">
-    <% @pets.each do |pet| %>
+    <% @mypets.each do |pet| %>
       <%= link_to pet_path(pet), class: 'no-deco' do %>
         <div class="card-trip">
           <%= cl_image_tag(pet.photo.key) %>
@@ -25,5 +23,3 @@
     <% end %>
   </div>
 </div>
-
-
