@@ -5,7 +5,10 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :photo, as: :file %>
+       <%= f.input :photo, as: :file,
+                            required: true,
+                            label: 'photo',
+                            required: true %>
       <%= f.input :username, label: "Nom d'utilisateur" %>
       <%= f.input :address, label: "Adresse" %>
             <%= f.input :phone_number, label: "Numéro de téléphone" %>
