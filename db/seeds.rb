@@ -86,4 +86,3 @@ panda.save!
 
 reservation1 = Reservation.create(pet: cat, user: jacob, start_date: Date.new(2020,2,25), end_date: Date.new(2020,2,27), status: 'Terminée', total_price: 64)
 reservation2 = Reservation.create(pet: elephant, user: jacob, start_date: Date.new(2020,4,12), end_date: Date.new(2020,4,14), status: 'En attente de validation', total_price: 164)
-
