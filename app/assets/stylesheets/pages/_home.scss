@@ -1,45 +1,54 @@
 .background {
-  background-image: url("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1586251578/Fond_ecran_dhh6p0.jpg");
+  background-image: url("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1586424838/fond_rent_a_pet_mfcztp.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position:50% 20%;
-  height: 99vh;
-  width: 100%;
+  background-position:50% 50%;
+  height: 100vh;
+  background-size: 100%;
   background-attachment: fixed;
 }
 .center{
   text-align:center;
+  width: 1500px;
 }
 .title {
-  padding-top:200px;
-  color: #a46150;
+  padding-top:100px;
+  color: white;
   font-family: 'Lobster', cursive;
   font-weight: bold;
-  font-size: 90px;
-  text-shadow: 2px 0 0 white, 2px 2px 0 white, 0 2px 0 white, -2px 2px 0 white, -2px 0 0 white, -2px -2px 0 white, 0 -2px 0 white, 2px -2px 0 white;
+  font-size: 110px;
+  text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
 }
 .content {
-  margin: 100px 150px;
+  margin: 80px 0;
+  color: white;
+  font-size:30px;
   font-weight:bold;
 }
 .button-home {
-  background-color: #a46150;
+
+  background-color: white;
   border-radius:10px;
-  color: white;
-  padding: 10px 20px;
-  font-size: 30px;
+  color: black;
+  padding: 10px 50px;
+  font-size: 40px;
   text-align: center;
   font-family: 'Lobster', cursive;
-  border:none;
+  border: 2px solid white;
 
   &:hover {
-  color:#a46150;
-  background-color: white;
-  border: 1px solid #a46150;
+  color: white;
+  background-color: black;
+  border: 2px solid white;
   }
 }
-.beware{
-  color:grey;
-  margin-top: 80px;
 
+
+.beware{
+  width: 100%;
+  text-align: center;
+  color:white;
+  margin-top: 120px;
 }
+
+
+
