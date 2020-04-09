@@ -1,0 +1,15 @@
+<%= render 'shared/navbar' %>
+
+
+<% @reservations.each do |reservation| %>
+  <div class="reservation">
+    <ul>
+      <li>Nom : <%= reservation.pet.name %> </li>
+      <li>Debut de la reservation : <%= reservation.start_date %> </li>
+      <li>Fin de la reservation :  <%= reservation.end_date %> </li>
+      <li>Prix Total <%= reservation.total_price %> €</li>
+      <li>Statut : <%= reservation.status %> </li>
+    </ul>
+    <%= link_to "Accepter*", accept_owner_reservation_path, class:"btn btn-primary" %>
+    <%= link_to "Decliner*", decline_owner_reservation_path, class:"btn btn-primary" %>
+<% end %>

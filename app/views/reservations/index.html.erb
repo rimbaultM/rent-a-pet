@@ -8,31 +8,16 @@
   <div class="place">
     <h1>Voici toutes vos réservations </h1>
 
+      <% @reservations.each do |reservation| %>
+        <div class="reservation">
+          <ul>
+            <li>Nom : <%= reservation.pet.name %> </li>
+            <li>Debut de la reservation : <%= reservation.start_date %> </li>
+            <li>Fin de la reservation :  <%= reservation.end_date %> </li>
+            <li>Prix Total <%= reservation.total_price %> €</li>
+            <li>Statut : <%= reservation.status %> </li>
+          </ul>
 
-      <% @reservation.each do |reservation| %>
-        <div class="container">
-          <div class="card-reservation">
-            <div class="col-4">
-              <!-- <div class="card-reservation"> -->
-                <%= cl_image_tag(reservation.pet.photo.key) %>
-            </div>
-            <div class="col-8 ">
-                <!-- <div class="card-reservation"> -->
-                  <div>
-                    <h4> <strong><%= reservation.pet.name %></strong> </h4>
-                  </div>
-                  <div>
-                    <h6>Du  <%= reservation.start_date %> au <%= reservation.end_date %> </h6>
-                  </div>
-                  <div>
-                    <h8>Statut : <%= reservation.status %> </h8>
-                  </div>
-                  <div class="price">
-                    <h7>Prix Total <strong><%= reservation.total_price %> €</strong></h7>
-                  </div>
-            </div>
-            </div>
-          </div>
         </div>
       <% end %>
 
