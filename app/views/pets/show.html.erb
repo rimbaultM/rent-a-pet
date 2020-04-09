@@ -12,25 +12,18 @@
         <h1 class="titre"><%= @pet.name %></h1>
         <div class="informations">
           <p><%= @pet.description %></p>
-
           <p class="pt-2">Espèce : <%= @pet.species %></p>
           <p class="prix pt-2"><strong><%= @pet.price_per_day %> € / jour</strong></p>
           <br>
-          <div class= "form-reservation">
-            <form action=""></form>
-            <label for="">Debut de la reservation</label>
-            <br>
-            <input type="date" name="start-date">
-            <br>
-            <label class="pt-3" for="">Fin de la reservation</label>
-            <br>
-            <input type="date" name="end-date">
-            <br>
-            <br>
-        </div>
+          <div>
+            <% simple_form_for [@pett, @reservationn] do |f| %>
+              <%= f.input :start_date, label: "Date de début" %>
+              <%= f.input :end_date, label: "Date de début" %>
+              <%= f.submit "Reservez*", reservations_path, class:"btn btn-primary resa" %>
+            <% end %>
+          </div>
 
 
-          <%= link_to "Reservez*", reservations_path, class:"btn btn-primary resa" %>
           <br>
           <br>
           <br><br>
