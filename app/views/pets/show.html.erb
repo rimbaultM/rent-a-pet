@@ -4,34 +4,37 @@
 
 <%= render 'shared/footer' %>
 
-<div class="container">
+<div class="container pt-5">
   <div class="place">
     <div class="card-product">
-      <%= cl_image_tag(@pet.photo.key) %>
+        <%= cl_image_tag(@pet.photo.key) %>
       <div class="card-product-infos">
-        <h1><%= @pet.name %></h1>
-        <p><%= @pet.description %></p>
+        <h1 class="titre"><%= @pet.name %></h1>
+        <div class="informations">
+          <p><%= @pet.description %></p>
 
-        <p>Espèce : <%= @pet.species %></p>
-        <p><%= @pet.price_per_day %> € / jour</p>
-        <br>
-        <div class= "form-reservation">
-          <form action=""></form>
-          <label for="">Debut de la reservation</label>
+          <p class="pt-2">Espèce : <%= @pet.species %></p>
+          <p class="prix pt-2"><strong><%= @pet.price_per_day %> € / jour</strong></p>
           <br>
-          <input type="date" name="start-date">
-          <br>
-          <label for="">Fin de la reservation</label>
-          <br>
-          <input type="date" name="end-date">
-          <br>
-          <br>
+          <div class= "form-reservation">
+            <form action=""></form>
+            <label for="">Debut de la reservation</label>
+            <br>
+            <input type="date" name="start-date">
+            <br>
+            <label class="pt-3" for="">Fin de la reservation</label>
+            <br>
+            <input type="date" name="end-date">
+            <br>
+            <br>
+        </div>
 
-          <%= link_to "Reservez*", reservations_path, class:"btn btn-primary" %>
+
+          <%= link_to "Reservez*", reservations_path, class:"btn btn-primary resa" %>
           <br>
           <br>
           <br><br>
-           <p>* L'acteur ne peut être loué moins d'une journée.<br>Il sera à votre disposition pour faire le ménage, la cuisine ou garder les enfants.</p>
+           <p class="ast">* L'acteur ne peut être loué moins d'une journée.<br>Il sera à votre disposition pour faire le ménage, la cuisine ou garder les enfants.</p>
 
 
 
@@ -43,4 +46,5 @@
   </div>
 
 </div>
+
 
