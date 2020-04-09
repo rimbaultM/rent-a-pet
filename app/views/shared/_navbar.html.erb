@@ -12,26 +12,30 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
 
-
-
         <li class="nav-item active">
           <%= link_to "Toutes Mascottes", pets_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Mes Mascottes", owner_pets_path, class: "nav-link" %>
         </li>
+
         <li class="nav-item active">
           <%= link_to "mes reservations", owner_reservations_path, class: "nav-link" %>
+       <li class="nav-item">
+          <%= link_to "Ajouter une mascotte", new_owner_pet_path, class: "nav-link" %>
+
         </li>
-        <!-- <li class="nav-item"> -->
-          <%#= link_to "Ajouter un acteur", new_owner_pet_path, class: "nav-link" %>
-        <!-- </li> -->
         <!-- <li class="nav-item"> -->
           <%#= link_to "Mes réservations", reservations_path, class: "nav-link" %>
         <!-- </li> -->
         <li class="nav-item dropdown">
           <!-- <img src="paul.jpg" alt="avatar"> -->
-          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= image_tag "https://res.cloudinary.com/x750ln/image/upload/v1586437668/user-circle_dlqni1.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+          <% end %>
+          <%#= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
           <%= current_user.username %>
 
           <!-- <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="paul.jpg"> -->

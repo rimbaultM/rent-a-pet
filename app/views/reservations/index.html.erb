@@ -2,10 +2,11 @@
     <!-- integration flash alerts devise -->
 <%= render 'shared/flashes' %>
 
+<%= render 'shared/footer' %>
+
 <div class="container">
   <div class="place">
     <h1>Voici toutes vos réservations </h1>
-
 
       <% @reservations.each do |reservation| %>
         <div class="reservation">
@@ -16,6 +17,7 @@
             <li>Prix Total <%= reservation.total_price %> €</li>
             <li>Statut : <%= reservation.status %> </li>
           </ul>
+
         </div>
       <% end %>
 
