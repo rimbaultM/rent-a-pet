@@ -1,15 +1,21 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h1>Create a new pet</h1>
+      <h1>Ajoute un nouveau pet</h1>
 
       <%= simple_form_for @pet do |f| %>
-        <%= f.input :name %>
-        <%= f.input :species %>
-        <%= f.input :description %>
-        <%= f.input :price_per_day %>
-        <%= f.input :photo %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
+
+        <div class="form-inputs">
+          <%= f.input :name label: "nom du pet"%>
+          <%= f.input :species label: "race du pet"%>
+          <%= f.input :description label: "description"%>
+          <%= f.input :price_per_day label: "prix"%>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+        </div>
+        <div class="form-actions btn btn-primary">
+          <%= f.button :submit, "Ajouter votre pet"  %>
+        </div>
       <% end %>
     </div>
   </div>
