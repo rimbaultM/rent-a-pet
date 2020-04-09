@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Ajoute un nouveau pet</h1>
+      <%= simple_form_for [:owner, @pet] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :species %>
+        <%= f.input :description %>
+        <%= f.input :price_per_day %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "Ajouter cette mascotte", class: "btn btn-primary" %>
+    <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+
