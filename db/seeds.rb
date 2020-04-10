@@ -62,7 +62,7 @@ crabe.save!
 
 dog = Pet.new( user: pierreg,
                 name:"Hector",
-                address: "36 avenue henri freville, rennes",
+                address: "40 place du colombier, rennes",
                 species: "chien",
                 description: "Hector sera votre meilleur ami. Très joueur, il appreciera sortir et courrir avec vous",
                 price_per_day: 82)

@@ -12,11 +12,12 @@
         <h1 class="titre"><%= @pet.name %></h1>
         <div class="informations">
           <p><%= @pet.description %></p>
+          <p class="pt-2">Adresse : <%= @pet.address %></p>
           <p class="pt-2">Espèce : <%= @pet.species %></p>
           <p class="prix pt-2"><strong><%= @pet.price_per_day %> € / jour</strong></p>
           <br>
           <div>
-            <%= simple_form_for [@pet, @reservation] do |f| %>
+            <%= simple_form_for([@pet, @reservation], remote: true) do |f| %>
               <%= f.input :start_date, as: :date, html5: true, label: "Date de début" %>
               <%= f.input :end_date, as: :date, html5: true, label: "Date de début" %>
               <%= f.submit "Reservez*", class:"btn btn-primary resa" %>
