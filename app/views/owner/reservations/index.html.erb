@@ -6,6 +6,7 @@
 
   <% @reservations.each do |reservation| %>
     <div class="card-reservation pt-5">
+      <%= cl_image_tag reservation.user.photo.key, class:'avatar-reservation'%>
       <ul>
         <li>Nom : <%= reservation.pet.name %> </li>
         <li>Debut de la reservation : <%= reservation.start_date %> </li>
