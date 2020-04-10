@@ -60,16 +60,6 @@ chien_photo = File.open(Rails.root.join('db/fixtures/pets/dog_1.jpg'))
 chien.photo.attach(io:chien_photo, filename: 'dog_1.jpg', content_type: 'image/jpg')
 chien.save!
 
-elephant = Pet.new( user: paul,
-               name: 'Dumbo',
-               address: '1 avenue du general maurice guillaudot, rennes',
-               species: 'Elephant',
-               description: "Ne vous fiez pas à sa taille, il sait se faire petit. Il adore se promener et s'amuser à l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
-               price_per_day: 82)
-elephant_photo = File.open(Rails.root.join('db/fixtures/pets/elephant_1.jpg'))
-elephant.photo.attach(io:elephant_photo, filename: 'elephant_1.jpg', content_type: 'image/jpg')
-elephant.save!
-
 poulet = Pet.new( user: bernard,
                name: 'Chuck',
                address: "10 rue du Vau Saint-germain, rennes",
@@ -81,14 +71,24 @@ poulet.photo.attach(io:poulet_photo, filename: 'poulet_1.jpg', content_type: 'im
 poulet.save!
 
 panda = Pet.new( user: bernard,
-               name: '17 rue vasselot, rennes',
-               address: "dinard",
+               name: 'Pandee',
+               address: '17 rue vasselot, rennes',
                species: 'Panda',
                description: "Pandee est un petit panda de chine, il n'est pas très rapide et adore dormir. Il vous donnera du réconfort dans votre journée ",
                price_per_day: 48)
 panda_photo = File.open(Rails.root.join('db/fixtures/pets/panda_1.jpg'))
 panda.photo.attach(io:panda_photo, filename: 'panda_1.jpg', content_type: 'image/jpg')
 panda.save!
+
+elephant = Pet.new( user: paul,
+               name: 'Dumbo',
+               address: '1 avenue du general maurice guillaudot, rennes',
+               species: 'Elephant',
+               description: "Ne vous fiez pas à sa taille, il sait se faire petit. Il adore se promener et s'amuser à l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
+               price_per_day: 82)
+elephant_photo = File.open(Rails.root.join('db/fixtures/pets/elephant_1.jpg'))
+elephant.photo.attach(io:elephant_photo, filename: 'elephant_1.jpg', content_type: 'image/jpg')
+elephant.save!
 
 reservation1 = Reservation.create(pet: cat, user: jacob, start_date: Date.new(2020,2,25), end_date: Date.new(2020,2,27), status: 'Terminée', total_price: 64)
 reservation2 = Reservation.create(pet: elephant, user: jacob, start_date: Date.new(2020,4,12), end_date: Date.new(2020,4,14), status: 'En attente de validation', total_price: 164)
