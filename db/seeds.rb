@@ -32,6 +32,7 @@ jacob.save!
 
 cat = Pet.new( user: bernard,
                name: 'Minou',
+               address: "112 boulevard jacques Cartier, rennes",
                species: 'Chat',
                description: "Minou est un chat au pelage soyeux, et très câlin. Il saura vous relaxer avec ses ronronnements. Très obéissant, vous apprecierez vous balader avec lui.",
                price_per_day: 82)
@@ -41,6 +42,7 @@ cat.save!
 
 crabe = Pet.new( user: bernard,
                name: 'Igor',
+               address: "56 boulevard de la republique, rennes",
                species: 'Crabe',
                description: "Igor est un crabe intelligent et sage, il adore qu'on lui nettoie les pinces après son brunch",
                price_per_day: 47)
@@ -50,6 +52,7 @@ crabe.save!
 
 chien = Pet.new( user: paul,
                name: 'Hector',
+               address: "14 rue de fougères, rennes",
                species: 'Chien',
                description: "Hector sera votre meilleur ami. Très joueur, il appreciera sortir et courrir avec vous",
                price_per_day: 35)
@@ -59,6 +62,7 @@ chien.save!
 
 elephant = Pet.new( user: paul,
                name: 'Dumbo',
+               address: '1 avenue du general maurice guillaudot, rennes',
                species: 'Elephant',
                description: "Ne vous fiez pas à sa taille, il sait se faire petit. Il adore se promener et s'amuser à l'exterieur. Dumbo est parfait pour jouer avec les enfants.",
                price_per_day: 82)
@@ -68,6 +72,7 @@ elephant.save!
 
 poulet = Pet.new( user: bernard,
                name: 'Chuck',
+               address: "10 rue du Vau Saint-germain, rennes",
                species: 'Poulet',
                description: "Chuck est un poulet intelligent et sage, il adore qu'on lui nettoie les pattes après son lunch",
                price_per_day: 16)
@@ -76,7 +81,8 @@ poulet.photo.attach(io:poulet_photo, filename: 'poulet_1.jpg', content_type: 'im
 poulet.save!
 
 panda = Pet.new( user: bernard,
-               name: 'Pandee',
+               name: '17 rue vasselot, rennes',
+               address: "dinard",
                species: 'Panda',
                description: "Pandee est un petit panda de chine, il n'est pas très rapide et adore dormir. Il vous donnera du réconfort dans votre journée ",
                price_per_day: 48)
