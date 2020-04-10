@@ -2,28 +2,44 @@
     <!-- integration flash alerts devise -->
 <%= render 'shared/flashes' %>
 
-<%= render 'shared/footer' %>
+ <h1 class="index-title pt-5">Choisissez votre partenaire de sortie</h1>
 
-<div class="container">
+<div class="indexcontent">
 
-  <h1 class="index-title pt-5">Choisissez votre partenaire de sortie</h1>
 
   <div class="cards">
-    <% @pets.each do |pet| %>
-      <%= link_to pet_path(pet), class: 'no-deco' do %>
-        <div class="card-trip">
-          <%= cl_image_tag(pet.photo.key) %>
 
-          <div class="card-trip-infos">
-            <h2 class="pt-3 pet_name"> <%= pet.name %></h2>
-            <h2 class="card-trip-pricing pet_price"><strong> <%= pet.price_per_day %></strong>€/ jour</h2>
-<!--             <h2 class="card-trip-pricing pet_price"><%= pet.user.username %></h2>
- -->            <%= cl_image_tag pet.user.photo.key, class: 'card-trip-user avatar-bordered' %>
+
+    <% @pets.each do |pet| %>
+
+      <%= link_to pet_path(pet), class: 'no-deco' do %>
+
+        <div class="card">
+          <%= cl_image_tag(pet.photo.key) %>
+          <div class="card-infos">
+            <h2 class="pt-3 name"> <%= pet.name %></h2>
+            <h2 class="card-pricing price"><strong> <%= pet.price_per_day %></strong>€/ jour</h2>
+            <%= cl_image_tag pet.user.photo.key, class: 'card-user avatar-bordered' %>
           </div>
         </div>
+
       <% end %>
+
     <% end %>
+
+
+
+
+
+    </div>
+
+      <div id="map"
+        style="width: 700px; height: 100vh"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
   </div>
-</div>
 
 
+<%= render 'shared/footer' %>
