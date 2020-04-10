@@ -31,6 +31,7 @@
 
 .price {
   align-items: top;
+  text-decoration: underline;
 }
 .btn-primary{
   margin-top: 8px;
@@ -39,4 +40,11 @@
 
 .reservation container {
   align-items: center;
+}
+
+.avatar-reservation{
+  border-radius: 50%;
+  float:left;
+  margin-bottom: 50px;
+  margin-right: 80px;
 }
