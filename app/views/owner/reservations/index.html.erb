@@ -1,7 +1,11 @@
 <%= render 'shared/navbar' %>
 
-<div class="reservation container" >
-    <div class="card-reservation">
+<div class="reservation container pt-5" >
+
+  <h1 class="titre pt-5 pb-5">Mes demandes de réservation</h1>
+
+  <% @reservations.each do |reservation| %>
+    <div class="card-reservation pt-5">
       <ul>
         <% @reservations.each do |reservation| %>
         <li>Nom : <%= reservation.pet.name %> </li>
@@ -9,8 +13,10 @@
         <li>Fin de la reservation :  <%= reservation.end_date %> </li>
         <li>Prix Total <%= reservation.total_price %> €</li>
         <li>Statut : <%= reservation.status %> </li>
-      <%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class:"btn btn-primary" %>
-      <%= link_to "Decliner", decline_owner_reservation_path(reservation), method: :patch, class:"btn btn-primary" %>
+      <%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class:"btn btn-success accept" %>
+      <%= link_to "Decliner", decline_owner_reservation_path(reservation), method: :patch, class:"btn btn-danger decline" %>
       </ul>
+    </div>
   <% end %>
 </div>
+
