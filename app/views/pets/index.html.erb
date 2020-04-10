@@ -4,11 +4,9 @@
 
  <h1 class="index-title pt-5">Choisissez votre partenaire de sortie</h1>
 
-<div class="indexcontent">
-
+<div class="indexcontent pt-3">
 
   <div class="cards">
-
 
     <% @pets.each do |pet| %>
 
@@ -27,19 +25,10 @@
 
     <% end %>
 
-
-
-
-
-    </div>
-
+  </div>
       <div id="map"
         style="width: 700px; height: 100vh"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-
-  </div>
-
-
-<%= render 'shared/footer' %>
+</div>

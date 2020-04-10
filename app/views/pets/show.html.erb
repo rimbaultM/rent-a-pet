@@ -4,7 +4,7 @@
 
 
 
-<div class="container pt-5">
+<div class="container pt-5 ">
   <div class="place">
     <div class="card-product">
         <%= cl_image_tag(@pet.photo.key) %>
@@ -12,25 +12,19 @@
         <h1 class="titre"><%= @pet.name %></h1>
         <div class="informations">
           <p><%= @pet.description %></p>
-
           <p class="pt-2">Espèce : <%= @pet.species %></p>
           <p class="prix pt-2"><strong><%= @pet.price_per_day %> € / jour</strong></p>
           <br>
-          <div class= "form-reservation">
-            <form action=""></form>
-            <label for="">Debut de la reservation</label>
-            <br>
-            <input type="date" name="start-date">
-            <br>
-            <label class="pt-3" for="">Fin de la reservation</label>
-            <br>
-            <input type="date" name="end-date">
-            <br>
-            <br>
-        </div>
+          <div>
+            <%= simple_form_for [@pet, @reservation] do |f| %>
+              <%= f.input :start_date, as: :date, html5: true, label: "Date de début" %>
+              <%= f.input :end_date, as: :date, html5: true, label: "Date de début" %>
+              <%= f.submit "Reservez*", class:"btn btn-primary resa" %>
+            <% end %>
+          </div>
 
 
-          <%= link_to "Reservez*", reservations_path, class:"btn btn-primary resa" %>
+
           <br>
           <br>
           <br><br>
