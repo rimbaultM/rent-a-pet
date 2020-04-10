@@ -15,7 +15,8 @@ const initMapbox = () => {
       container: 'map',
       //style: 'mapbox://styles/mapbox/streets-v10'
 
-      style: 'mapbox://styles/naheul/ck8t9rcbl06uv1iqovmw52jk7'
+      style: 'mapbox://styles/naheul/ck8u5k02011o21iphzz0b816w'
+
 
 
     });
