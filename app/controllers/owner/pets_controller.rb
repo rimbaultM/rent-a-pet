@@ -21,7 +21,7 @@ class Owner::PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :species, :description, :price_per_day, :photo)
+    params.require(:pet).permit(:name, :address, :species, :description, :price_per_day, :photo)
   end
 
 
