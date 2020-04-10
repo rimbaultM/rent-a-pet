@@ -9,8 +9,8 @@
         <li>Fin de la reservation :  <%= reservation.end_date %> </li>
         <li>Prix Total <%= reservation.total_price %> €</li>
         <li>Statut : <%= reservation.status %> </li>
-      <%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class:"btn btn-primary" %>
-      <%= link_to "Decliner", decline_owner_reservation_path(reservation), method: :patch, class:"btn btn-primary" %>
+      <%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class:"btn btn-success accept" %>
+      <%= link_to "Decliner", decline_owner_reservation_path(reservation), method: :patch, class:"btn btn-danger decline" %>
       </ul>
   <% end %>
 </div>
