@@ -4,23 +4,20 @@ class ReservationsController < ApplicationController
     @reservations = current_user.reservations
   end
 
-  # def new
-  #   @pet = Pet.find(params[:pet_id])
-  #   @reservation = Reservation.new
-  # end
+
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @pett = Pet.find(params[:pet_id])
+    @pet = Pet.find(params[:pet_id])
     @reservation.user = current_user
-    @reservation.pett = @pett
-    @reservation.total_price = (@reservation.end_date - @reservation.start_date)* @pett.price_per_day
+    @reservation.pet = @pet
+    @reservation.total_price = (@reservation.end_date - @reservation.start_date)* @pet.price_per_day
     @reservation.status = 'en attente'
 
     if @reservation.save
       redirect_to reservations_path
     else
-      # redirect_to pets_path(@pet)
+      redirect_to pets_path(@pet)
     end
   end
 

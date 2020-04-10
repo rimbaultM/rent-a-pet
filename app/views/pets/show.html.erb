@@ -4,7 +4,7 @@
 
 <%= render 'shared/footer' %>
 
-<div class="container pt-5">
+<div class="container pt-5 ">
   <div class="place">
     <div class="card-product">
         <%= cl_image_tag(@pet.photo.key) %>
@@ -16,12 +16,13 @@
           <p class="prix pt-2"><strong><%= @pet.price_per_day %> € / jour</strong></p>
           <br>
           <div>
-            <% simple_form_for [@pett, @reservationn] do |f| %>
-              <%= f.input :start_date, label: "Date de début" %>
-              <%= f.input :end_date, label: "Date de début" %>
-              <%= f.submit "Reservez*", reservations_path, class:"btn btn-primary resa" %>
+            <%= simple_form_for [@pet, @reservation] do |f| %>
+              <%= f.input :start_date, as: :date, html5: true, label: "Date de début" %>
+              <%= f.input :end_date, as: :date, html5: true, label: "Date de début" %>
+              <%= f.submit "Reservez*", class:"btn btn-primary" %>
             <% end %>
           </div>
+
 
 
           <br>
