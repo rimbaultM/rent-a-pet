@@ -6,6 +6,7 @@
       <h1 class="mt-5">Ajoute un nouveau pet</h1>
       <%= simple_form_for [:owner, @pet] do |f| %>
         <%= f.input :name %>
+        <%= f.input :address %>
         <%= f.input :species %>
         <%= f.input :description %>
         <%= f.input :price_per_day %>
