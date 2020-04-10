@@ -7,10 +7,12 @@
   <% @reservations.each do |reservation| %>
     <div class="card-reservation pt-5">
       <ul>
-        <li>Nom : <%= reservation.pet.name %> </li>
+        <li>Nom :<strong> <%= reservation.pet.name %> </strong></li>
         <li>Debut de la reservation : <%= reservation.start_date %> </li>
         <li>Fin de la reservation :  <%= reservation.end_date %> </li>
+        <div class= "price">
         <li>Prix Total <%= reservation.total_price %> €</li>
+        </div>
         <li>Statut : <%= reservation.status %> </li>
       <%= link_to "Accepter", accept_owner_reservation_path(reservation), method: :patch, class:"btn btn-success accept" %>
       <%= link_to "Decliner", decline_owner_reservation_path(reservation), method: :patch, class:"btn btn-danger decline" %>
