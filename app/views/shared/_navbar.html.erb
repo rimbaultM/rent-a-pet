@@ -24,12 +24,21 @@
           <%= link_to "Mes locations", reservations_path, class: "nav-link" %>
         </li>
 
+
+
+        <% if current_user.username == "hugo" %>
+          <i class="fas fa-bell colorred"></i>
+        <% end %>
+
+
+
         <li class="nav-item active">
 
           <%= link_to "mes reservations", owner_reservations_path, class: "nav-link" %>
         </li>
 
-       <li class="nav-item">
+
+        <li class="nav-item">
 
           <%= link_to "Ajouter une mascotte", new_owner_pet_path, class: "nav-link" %>
         </li>
