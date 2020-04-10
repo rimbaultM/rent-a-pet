@@ -7,7 +7,6 @@
   <% @reservations.each do |reservation| %>
     <div class="card-reservation pt-5">
       <ul>
-        <% @reservations.each do |reservation| %>
         <li>Nom : <%= reservation.pet.name %> </li>
         <li>Debut de la reservation : <%= reservation.start_date %> </li>
         <li>Fin de la reservation :  <%= reservation.end_date %> </li>
