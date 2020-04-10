@@ -17,6 +17,7 @@ const initMapbox = () => {
 
       style: 'mapbox://styles/naheul/ck8t9rcbl06uv1iqovmw52jk7'
 
+
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
