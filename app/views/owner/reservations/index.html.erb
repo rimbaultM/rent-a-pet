@@ -1,9 +1,9 @@
 <%= render 'shared/navbar' %>
 
 <div class="reservation container" >
-  <% @reservations.each do |reservation| %>
     <div class="card-reservation">
       <ul>
+        <% @reservations.each do |reservation| %>
         <li>Nom : <%= reservation.pet.name %> </li>
         <li>Debut de la reservation : <%= reservation.start_date %> </li>
         <li>Fin de la reservation :  <%= reservation.end_date %> </li>
