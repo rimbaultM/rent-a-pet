@@ -17,6 +17,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @reservation = Reservation.new
   end
 
 end
