@@ -11,18 +11,8 @@
 
 <div class="container pt-5">
   <div class="place">
-    <h1 class="titre">Voici toutes vos réservations </h1>
+    <h1 class="titre pt-3">Voici toutes vos réservations </h1>
 
-      <% @reservations.each do |reservation| %>
-
-        <div class="reservation">
-          <ul>
-            <li>Nom : <%= reservation.pet.name %> </li>
-            <li>Debut de la reservation : <%= reservation.start_date %> </li>
-            <li>Fin de la reservation :  <%= reservation.end_date %> </li>
-            <li>Prix Total <%= reservation.total_price %> €</li>
-            <li>Statut : <%= reservation.status %> </li>
-          </ul>
       <% @reservations.each do |reservation| %>
         <div class="container">
 
@@ -48,8 +38,6 @@
           </div>
         </div>
       <% end %>
-
-
 
   </div>
 </div>
